@@ -126,6 +126,7 @@ button{
     border: none;
     flex: 1;
     min-width: 70px;
+    max-width: 100px;
 }
 
 button:hover {
@@ -149,7 +150,7 @@ button:hover {
 
 .article{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding-top: 15px;
 }
@@ -164,10 +165,12 @@ button:hover {
     background-color: #FFFFFF;
     text-align: center;
     height: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 15px;
     box-shadow: rgba(149, 157, 165, 0.9) 0px 8px 24px;
-    border-left: 5px solid rgb(255, 192, 4);
+    border-left: 5px solid;
+    border-image: linear-gradient(to top, #04c4aa, #03ff03);
+    border-image-slice: 1;
     overflow: hidden;
 
 }
@@ -273,6 +276,8 @@ button:hover {
 
 .menu p, .menu2 p{
     color: #FFFFFF;
+    cursor: pointer;
+
 }
 
 li{
@@ -281,17 +286,15 @@ li{
     align-items: center;
 }
 
-.menu img{
-    height: 20px;
-    width: auto;
-}
-
 .menu svg, .menu2 svg{
     height: 20px;
     width: auto;
     fill: #E2E8F0;
+    cursor: pointer;
+
 }
 
 .menu > *, .menu2 >*{
     list-style-type: none;
 }
+
